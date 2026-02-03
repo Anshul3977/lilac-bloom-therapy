@@ -52,18 +52,14 @@ const Navigation = () => {
     { label: "Contact", to: "/contact" },
   ];
 
+  const navClasses = [
+    "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+    isVisible ? "translate-y-0" : "-translate-y-full",
+    isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+  ].join(" ");
+
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      } ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-sm shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
+    <header className={navClasses}>
       <div className="container mx-auto px-6 lg:px-12">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -157,7 +153,7 @@ const Navigation = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   );
 };
 

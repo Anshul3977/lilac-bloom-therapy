@@ -17,7 +17,7 @@ const Support = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 bg-secondary" ref={ref}>
+    <section className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
