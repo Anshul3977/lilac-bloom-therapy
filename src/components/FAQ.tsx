@@ -53,22 +53,22 @@ const FAQ = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="text-center mb-12"
           >
-            <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-primary font-medium text-sm uppercase tracking-widest mb-4 block">
               Common Questions
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-foreground">
               Frequently Asked Questions
             </h2>
           </motion.div>
 
           {/* Accordion */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
@@ -77,7 +77,7 @@ const FAQ = () => {
                   value={`item-${index}`}
                   className="bg-background rounded-lg px-6 border-none shadow-sm"
                 >
-                  <AccordionTrigger className="text-left font-serif text-lg hover:no-underline text-foreground">
+                  <AccordionTrigger className="text-left font-serif text-lg hover:no-underline text-foreground font-normal">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground leading-relaxed">

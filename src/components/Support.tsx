@@ -22,21 +22,36 @@ const Support = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-primary font-medium text-sm uppercase tracking-widest mb-4 block"
+            >
               Your Journey
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6 leading-tight"
+            >
               Together, we can help you
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-muted-foreground leading-relaxed mb-8 font-light"
+            >
               Therapy is a collaborative process. I'll provide guidance and support 
               while honoring your unique experiences and goals. Here's what we can 
               work on together:
-            </p>
+            </motion.p>
 
             {/* Bullet Points */}
             <ul className="space-y-4">
@@ -59,9 +74,9 @@ const Support = () => {
 
           {/* Image */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.2 }}
             className="relative"
           >
             <div className="aspect-square overflow-hidden rounded-lg">
