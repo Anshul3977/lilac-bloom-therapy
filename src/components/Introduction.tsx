@@ -35,31 +35,41 @@ const Introduction = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-primary font-medium text-sm uppercase tracking-widest mb-4 block"
+            >
               My Approach
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
-              Healing happens in connection
-            </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6 leading-tight"
+            >
+              Lately it feels like <span className="italic underline decoration-primary/30">too much.</span>
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="space-y-4 text-muted-foreground leading-relaxed font-light"
+            >
               <p>
-                I believe that true healing happens when we feel truly seen and understood. 
-                My approach combines evidence-based techniques with deep compassion, 
-                creating a safe space where you can explore your thoughts and feelings 
-                without judgment.
+                You're holding it all together—at work, at home, in your relationships—but 
+                underneath the surface, you're tired, stretched thin, and unsure what you 
+                need anymore.
+              </p>
+              <p className="font-medium text-foreground">
+                You're not alone—and you're in the right place.
               </p>
               <p>
-                Whether you're struggling with anxiety, depression, relationship issues, 
-                or life transitions, I'm here to walk alongside you on your journey 
-                toward wellness. Together, we'll uncover your innate strengths and 
-                develop practical tools for lasting change.
+                Therapy can help you reconnect with yourself, feel more grounded, 
+                and finally make space for your own needs. Let's figure it out together.
               </p>
-              <p>
-                Every person's path is unique, and I tailor my approach to meet you 
-                exactly where you are. Your story matters, and I'm honored to be 
-                part of your healing journey.
-              </p>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -37,13 +37,13 @@ const Specialties = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
-            Areas of Focus
+          <span className="text-primary font-medium text-sm uppercase tracking-widest mb-4 block">
+            My Specialties
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-foreground">
             How I Can Help
           </h2>
         </motion.div>
@@ -53,9 +53,13 @@ const Specialties = () => {
           {specialties.map((specialty, index) => (
             <motion.div
               key={specialty.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ 
+                duration: 0.7, 
+                delay: 0.2 + index * 0.15,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
               className="text-center group"
             >
               {/* Circular Image */}
@@ -71,10 +75,10 @@ const Specialties = () => {
               </div>
 
               {/* Content */}
-              <h3 className="font-serif text-xl md:text-2xl font-medium text-foreground mb-3">
+              <h3 className="font-serif text-xl md:text-2xl font-normal text-foreground mb-3">
                 {specialty.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed max-w-xs mx-auto">
+              <p className="text-muted-foreground leading-relaxed max-w-xs mx-auto font-light">
                 {specialty.description}
               </p>
             </motion.div>

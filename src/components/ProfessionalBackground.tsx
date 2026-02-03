@@ -59,22 +59,22 @@ const ProfessionalBackground = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="text-center mb-12"
           >
-            <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-primary font-medium text-sm uppercase tracking-widest mb-4 block">
               Credentials
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-foreground">
               Professional Background
             </h2>
           </motion.div>
 
           {/* Accordion */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="mb-16"
           >
             <Accordion type="single" collapsible className="space-y-4">
@@ -84,7 +84,7 @@ const ProfessionalBackground = () => {
                   value={`item-${index}`}
                   className="bg-card rounded-lg px-6 border-none shadow-sm"
                 >
-                  <AccordionTrigger className="text-left font-serif text-lg hover:no-underline text-foreground">
+                  <AccordionTrigger className="text-left font-serif text-lg hover:no-underline text-foreground font-normal">
                     {credential.title}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground whitespace-pre-line leading-relaxed">
@@ -97,9 +97,9 @@ const ProfessionalBackground = () => {
 
           {/* CTA Banner */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="bg-primary rounded-2xl p-8 md:p-12 text-center"
           >
             <h3 className="font-serif text-2xl md:text-3xl font-medium text-primary-foreground mb-4">

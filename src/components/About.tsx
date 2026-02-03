@@ -13,9 +13,9 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Overlapping Circular Images */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="relative flex justify-center"
           >
             <div className="relative w-full max-w-md">
@@ -46,20 +46,40 @@ const About = () => {
 
           {/* Content */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.2 }}
           >
-            <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-primary font-medium text-sm uppercase tracking-widest mb-4 block"
+            >
               About Me
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6 leading-tight"
+            >
               Dr. Sarah Mitchell
-            </h2>
-            <p className="text-xl text-foreground/80 font-serif italic mb-6">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.45 }}
+              className="text-xl text-foreground/80 font-serif italic mb-6"
+            >
               Licensed Clinical Psychologist
-            </p>
-            <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="space-y-4 text-muted-foreground leading-relaxed mb-8 font-light"
+            >
               <p>
                 With over 15 years of experience, I've dedicated my career to helping 
                 individuals find healing and growth. I hold a Ph.D. in Clinical Psychology 
@@ -71,17 +91,23 @@ const About = () => {
                 comprehensive, personalized care. I believe that everyone has the 
                 capacity for growth and transformation.
               </p>
-            </div>
-            <Button
-              onClick={() => {
-                const element = document.getElementById("professional");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
-              variant="outline"
-              className="rounded-full px-8 border-foreground/20 hover:bg-card"
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.6 }}
             >
-              View Credentials
-            </Button>
+              <Button
+                onClick={() => {
+                  const element = document.getElementById("professional");
+                  element?.scrollIntoView({ behavior: "smooth" });
+                }}
+                variant="outline"
+                className="rounded-full px-8 border-foreground/20 hover:bg-card"
+              >
+                View Credentials
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </div>
