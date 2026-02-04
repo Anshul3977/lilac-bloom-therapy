@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,57 +6,57 @@
 
 @layer base {
   :root {
-    /* Lilac Therapy Color Palette */
-    --background: 30 20% 96%; /* #f5f3f0 cream */
-    --foreground: 30 10% 20%; /* dark brown text */
+    /* Exact Lilac Template Color Palette */
+    --background: 36 33% 97%; /* #F9F7F4 cream */
+    --foreground: 72 30% 15%; /* #2D3319 text-dark */
 
-    --card: 30 15% 94%; /* #e8e6e3 light tan */
-    --card-foreground: 30 10% 20%;
+    --card: 36 20% 95%; /* #F5F3F0 cream-alt */
+    --card-foreground: 72 30% 15%;
 
-    --popover: 30 20% 96%;
-    --popover-foreground: 30 10% 20%;
+    --popover: 36 33% 97%;
+    --popover-foreground: 72 30% 15%;
 
-    --primary: 75 20% 47%; /* #818868 olive green */
-    --primary-foreground: 30 20% 96%;
+    --primary: 93 13% 49%; /* #7E8D6E olive */
+    --primary-foreground: 36 33% 97%;
 
-    --secondary: 280 20% 90%; /* #e5dce8 lilac */
-    --secondary-foreground: 30 10% 20%;
+    --secondary: 300 22% 89%; /* #E8DCE8 light-lilac */
+    --secondary-foreground: 72 30% 15%;
 
-    --muted: 30 15% 94%;
-    --muted-foreground: 30 10% 45%;
+    --muted: 40 15% 90%; /* #E9E6E1 light-tan */
+    --muted-foreground: 0 0% 35%; /* #5A5A5A text-medium */
 
-    --accent: 280 20% 90%; /* lilac */
-    --accent-foreground: 30 10% 20%;
+    --accent: 300 22% 89%; /* light-lilac */
+    --accent-foreground: 72 30% 15%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 30 20% 96%;
+    --destructive-foreground: 36 33% 97%;
 
-    --border: 30 15% 85%;
-    --input: 30 15% 85%;
-    --ring: 75 20% 47%;
+    --border: 40 15% 85%;
+    --input: 40 15% 85%;
+    --ring: 93 13% 49%;
 
     --radius: 0.5rem;
 
-    /* Custom tokens */
-    --cream: 30 20% 96%;
-    --cream-darker: 30 15% 91%; /* #ede9e4 */
-    --tan: 30 15% 94%;
-    --lilac: 280 20% 90%;
-    --olive: 75 20% 47%;
-    --text-dark: 30 10% 20%;
-    --text-muted: 30 10% 45%;
+    /* Custom semantic tokens */
+    --cream: 36 33% 97%; /* #F9F7F4 */
+    --cream-alt: 36 20% 95%; /* #F5F3F0 */
+    --light-tan: 40 15% 90%; /* #E9E6E1 */
+    --light-lilac: 300 22% 89%; /* #E8DCE8 */
+    --olive: 93 13% 49%; /* #7E8D6E */
+    --text-dark: 72 30% 15%; /* #2D3319 */
+    --text-medium: 0 0% 35%; /* #5A5A5A */
     
     /* Pure white for alternating sections */
     --white: 0 0% 100%;
 
-    --sidebar-background: 30 20% 96%;
-    --sidebar-foreground: 30 10% 20%;
-    --sidebar-primary: 75 20% 47%;
-    --sidebar-primary-foreground: 30 20% 96%;
-    --sidebar-accent: 280 20% 90%;
-    --sidebar-accent-foreground: 30 10% 20%;
-    --sidebar-border: 30 15% 85%;
-    --sidebar-ring: 75 20% 47%;
+    --sidebar-background: 36 33% 97%;
+    --sidebar-foreground: 72 30% 15%;
+    --sidebar-primary: 93 13% 49%;
+    --sidebar-primary-foreground: 36 33% 97%;
+    --sidebar-accent: 300 22% 89%;
+    --sidebar-accent-foreground: 72 30% 15%;
+    --sidebar-border: 40 15% 85%;
+    --sidebar-ring: 93 13% 49%;
   }
 
   .dark {
@@ -69,16 +69,16 @@
     --popover: 30 10% 10%;
     --popover-foreground: 30 20% 96%;
 
-    --primary: 75 25% 55%;
+    --primary: 93 20% 55%;
     --primary-foreground: 30 10% 10%;
 
-    --secondary: 280 15% 25%;
+    --secondary: 300 15% 25%;
     --secondary-foreground: 30 20% 96%;
 
     --muted: 30 10% 20%;
     --muted-foreground: 30 15% 65%;
 
-    --accent: 280 15% 25%;
+    --accent: 300 15% 25%;
     --accent-foreground: 30 20% 96%;
 
     --destructive: 0 62% 30%;
@@ -86,16 +86,16 @@
 
     --border: 30 10% 25%;
     --input: 30 10% 25%;
-    --ring: 75 25% 55%;
+    --ring: 93 20% 55%;
 
     --sidebar-background: 30 10% 10%;
     --sidebar-foreground: 30 20% 96%;
-    --sidebar-primary: 75 25% 55%;
+    --sidebar-primary: 93 20% 55%;
     --sidebar-primary-foreground: 30 10% 10%;
-    --sidebar-accent: 280 15% 25%;
+    --sidebar-accent: 300 15% 25%;
     --sidebar-accent-foreground: 30 20% 96%;
     --sidebar-border: 30 10% 25%;
-    --sidebar-ring: 75 25% 55%;
+    --sidebar-ring: 93 20% 55%;
   }
 }
 
@@ -105,7 +105,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {

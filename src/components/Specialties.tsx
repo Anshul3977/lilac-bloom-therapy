@@ -31,19 +31,19 @@ const Specialties = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="specialties" className="py-24 bg-cream-darker" ref={ref}>
+    <section id="specialties" className="py-24 bg-light-tan" ref={ref}>
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium text-sm uppercase tracking-widest mb-4 block">
+          <span className="text-olive font-medium text-xs uppercase tracking-widest mb-4 block">
             My Specialties
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-foreground">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-text-dark">
             How I Can Help
           </h2>
         </motion.div>
@@ -56,15 +56,15 @@ const Specialties = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ 
-                duration: 0.7, 
-                delay: 0.2 + index * 0.15,
+                duration: 0.6, 
+                delay: 0.1 + index * 0.1,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
               className="text-center group"
             >
               {/* Circular Image */}
-              <div className="relative mx-auto mb-6 w-48 h-48">
-                <div className="w-full h-full rounded-full overflow-hidden border-4 border-secondary group-hover:border-primary transition-colors duration-300">
+              <div className="relative mx-auto mb-8 w-48 h-48">
+                <div className="w-full h-full rounded-full overflow-hidden border-4 border-light-lilac group-hover:border-olive transition-colors duration-300">
                   <img
                     src={specialty.image}
                     alt={specialty.title}
@@ -75,10 +75,10 @@ const Specialties = () => {
               </div>
 
               {/* Content */}
-              <h3 className="font-serif text-xl md:text-2xl font-normal text-foreground mb-3">
+              <h3 className="font-serif text-2xl md:text-3xl font-normal text-text-dark mb-4">
                 {specialty.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed max-w-xs mx-auto font-light">
+              <p className="text-text-medium leading-relaxed max-w-xs mx-auto font-light text-base md:text-lg">
                 {specialty.description}
               </p>
             </motion.div>

@@ -15,39 +15,44 @@ const Hero = () => {
   };
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center pt-20 bg-background">
+    <section ref={ref} className="min-h-screen flex items-center pt-20 bg-cream relative overflow-hidden">
+      {/* Decorative circles */}
+      <div className="absolute top-20 left-10 w-64 h-64 bg-light-lilac rounded-full opacity-40 -z-10" />
+      <div className="absolute bottom-40 right-20 w-40 h-40 bg-light-lilac rounded-full opacity-30 -z-10" />
+      
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="order-2 lg:order-1"
           >
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-[1.1] text-foreground mb-6 tracking-tight">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-[1.05] text-text-dark mb-8 tracking-tight">
               Live your life
-              <span className="block italic text-primary">in full bloom</span>
+              <span className="block italic text-olive">in full bloom</span>
             </h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed font-light"
+              transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+              className="text-base md:text-lg text-text-medium mb-10 max-w-lg leading-relaxed font-light"
             >
               Therapy for Adults in San Francisco, CA. 
               Compassionate support for anxiety, depression, and life transitions.
             </motion.p>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Button
                 onClick={scrollToContact}
+                variant="outline"
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 text-base"
+                className="rounded-full px-10 py-6 border-2 border-text-dark text-text-dark hover:bg-card uppercase tracking-widest text-xs md:text-sm font-medium"
               >
                 Connect with me
               </Button>
@@ -58,7 +63,7 @@ const Hero = () => {
                   const element = document.getElementById("about");
                   element?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="rounded-full px-8 border-foreground/20 hover:bg-card text-base"
+                className="rounded-full px-10 py-6 border-2 border-text-dark text-text-dark hover:bg-card uppercase tracking-widest text-xs md:text-sm font-medium"
               >
                 Learn More
               </Button>
@@ -69,10 +74,14 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.1 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.1 }}
             className="order-1 lg:order-2 flex justify-center"
           >
             <div className="relative w-full max-w-md">
+              {/* Decorative circles behind image */}
+              <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-light-lilac rounded-full -z-10" />
+              <div className="absolute -top-6 -right-6 w-20 h-20 bg-olive/20 rounded-full -z-10" />
+              
               {/* Arched container */}
               <div
                 className="relative overflow-hidden bg-card"
@@ -88,9 +97,6 @@ const Hero = () => {
                   loading="eager"
                 />
               </div>
-              {/* Decorative element */}
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-secondary rounded-full -z-10" />
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary/20 rounded-full -z-10" />
             </div>
           </motion.div>
         </div>

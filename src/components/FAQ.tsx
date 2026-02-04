@@ -10,34 +10,29 @@ import {
 
 const faqs = [
   {
-    question: "What can I expect in our first session?",
+    question: "What can I expect from our first session?",
     answer:
-      "Our first session is an opportunity for us to get to know each other. I'll ask about your background, what brings you to therapy, and your goals. It's also a chance for you to ask questions and see if we're a good fit. There's no pressure to share more than you're comfortable with.",
+      "Our first session is an opportunity for us to get to know each other. I'll ask about your history, what brings you to therapy, and your goals. It's also a chance for you to ask questions and see if we're a good fit. There's no pressure—just an open conversation.",
   },
   {
     question: "How long does therapy typically last?",
     answer:
-      "The duration of therapy varies greatly depending on your individual needs and goals. Some clients find relief in a few months, while others benefit from longer-term work. We'll regularly check in on your progress and adjust our approach as needed.",
+      "The length of therapy varies for each person. Some people find relief in a few months, while others benefit from longer-term work. We'll regularly check in on your progress and adjust our approach as needed. You're always in control of your journey.",
   },
   {
     question: "Do you offer virtual sessions?",
     answer:
-      "Yes! I offer secure video sessions for clients who prefer the convenience of meeting from home or can't make it to the office. Virtual sessions are conducted through a HIPAA-compliant platform to ensure your privacy.",
+      "Yes! I offer secure video sessions for clients throughout California. Virtual therapy provides the same quality of care with added convenience. Many clients find it easier to fit therapy into their busy schedules when they can attend from home or work.",
   },
   {
     question: "What are your fees and do you accept insurance?",
     answer:
-      "I offer a sliding scale based on income and financial circumstances. I am an out-of-network provider, which means I can provide you with a superbill to submit to your insurance for potential reimbursement. Please contact me to discuss fees and payment options.",
+      "I offer a free 15-minute consultation to discuss your needs. Session fees vary based on the type of service. I'm an out-of-network provider but can provide superbills for insurance reimbursement. I also offer a limited number of sliding scale spots.",
   },
   {
-    question: "How often should we meet?",
+    question: "How do I know if therapy is right for me?",
     answer:
-      "Most clients start with weekly sessions to build momentum and establish a strong therapeutic relationship. As you progress, we may adjust the frequency to biweekly or monthly, depending on your needs and preferences.",
-  },
-  {
-    question: "Is everything I share confidential?",
-    answer:
-      "Yes, confidentiality is the cornerstone of therapy. Everything you share is kept strictly confidential, with a few legal exceptions (such as imminent risk of harm to yourself or others). I'll explain these limits in detail during our first session.",
+      "If you're feeling stuck, overwhelmed, or like something needs to change, therapy might help. You don't need to have a specific diagnosis or crisis. Therapy is for anyone who wants support in understanding themselves better and living more fully.",
   },
 ];
 
@@ -46,48 +41,53 @@ const FAQ = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="faq" className="py-24 bg-card" ref={ref}>
+    <section id="faq" className="py-24 bg-cream" ref={ref}>
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-3xl mx-auto">
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-center mb-12"
-          >
-            <span className="text-primary font-medium text-sm uppercase tracking-widest mb-4 block">
-              Common Questions
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-foreground">
-              Frequently Asked Questions
-            </h2>
-          </motion.div>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="text-center mb-16"
+        >
+          <span className="text-olive font-medium text-xs uppercase tracking-widest mb-4 block">
+            FAQ
+          </span>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-text-dark">
+            Common Questions
+          </h2>
+        </motion.div>
 
-          {/* Accordion */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          >
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
+        {/* Accordion */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="max-w-3xl mx-auto"
+        >
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.08 }}
+              >
                 <AccordionItem
-                  key={index}
                   value={`item-${index}`}
-                  className="bg-background rounded-lg px-6 border-none shadow-sm"
+                  className="bg-white rounded-lg shadow-sm border-none px-6"
                 >
-                  <AccordionTrigger className="text-left font-serif text-lg hover:no-underline text-foreground font-normal">
+                  <AccordionTrigger className="text-left font-serif text-xl md:text-2xl font-normal text-text-dark hover:no-underline py-6">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                  <AccordionContent className="text-text-medium leading-relaxed font-light text-base md:text-lg pb-6">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
-              ))}
-            </Accordion>
-          </motion.div>
-        </div>
+              </motion.div>
+            ))}
+          </Accordion>
+        </motion.div>
       </div>
     </section>
   );
