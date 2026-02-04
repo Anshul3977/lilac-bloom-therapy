@@ -51,11 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Exact Lilac Template Colors
         cream: "hsl(var(--cream))",
-        "cream-darker": "hsl(var(--cream-darker))",
-        tan: "hsl(var(--tan))",
-        lilac: "hsl(var(--lilac))",
+        "cream-alt": "hsl(var(--cream-alt))",
+        "light-tan": "hsl(var(--light-tan))",
+        "light-lilac": "hsl(var(--light-lilac))",
         olive: "hsl(var(--olive))",
+        "text-dark": "hsl(var(--text-dark))",
+        "text-medium": "hsl(var(--text-medium))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -95,8 +98,8 @@ export default {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.4s cubic-bezier(0.87, 0, 0.13, 1)",
-        "accordion-up": "accordion-up 0.3s cubic-bezier(0.87, 0, 0.13, 1)",
+        "accordion-down": "accordion-down 0.5s cubic-bezier(0.87, 0, 0.13, 1)",
+        "accordion-up": "accordion-up 0.4s cubic-bezier(0.87, 0, 0.13, 1)",
         "fade-in": "fade-in 0.6s ease-out forwards",
         "fade-in-left": "fade-in-left 0.6s ease-out forwards",
         "fade-in-right": "fade-in-right 0.6s ease-out forwards",
