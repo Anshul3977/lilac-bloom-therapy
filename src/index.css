@@ -1,137 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  :root {
-    /* Exact Lilac Template Color Palette */
-    --background: 36 33% 97%; /* #F9F7F4 cream */
-    --foreground: 72 30% 15%; /* #2D3319 text-dark */
-
-    --card: 36 20% 95%; /* #F5F3F0 cream-alt */
-    --card-foreground: 72 30% 15%;
-
-    --popover: 36 33% 97%;
-    --popover-foreground: 72 30% 15%;
-
-    --primary: 93 13% 49%; /* #7E8D6E olive */
-    --primary-foreground: 36 33% 97%;
-
-    --secondary: 300 22% 89%; /* #E8DCE8 light-lilac */
-    --secondary-foreground: 72 30% 15%;
-
-    --muted: 40 15% 90%; /* #E9E6E1 light-tan */
-    --muted-foreground: 0 0% 35%; /* #5A5A5A text-medium */
-
-    --accent: 300 22% 89%; /* light-lilac */
-    --accent-foreground: 72 30% 15%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 36 33% 97%;
-
-    --border: 40 15% 85%;
-    --input: 40 15% 85%;
-    --ring: 93 13% 49%;
-
-    --radius: 0.5rem;
-
-    /* Custom semantic tokens */
-    --cream: 36 33% 97%; /* #F9F7F4 */
-    --cream-alt: 36 20% 95%; /* #F5F3F0 */
-    --light-tan: 40 15% 90%; /* #E9E6E1 */
-    --light-lilac: 300 22% 89%; /* #E8DCE8 */
-    --olive: 93 13% 49%; /* #7E8D6E */
-    --text-dark: 72 30% 15%; /* #2D3319 */
-    --text-medium: 0 0% 35%; /* #5A5A5A */
-    
-    /* Pure white for alternating sections */
-    --white: 0 0% 100%;
-
-    --sidebar-background: 36 33% 97%;
-    --sidebar-foreground: 72 30% 15%;
-    --sidebar-primary: 93 13% 49%;
-    --sidebar-primary-foreground: 36 33% 97%;
-    --sidebar-accent: 300 22% 89%;
-    --sidebar-accent-foreground: 72 30% 15%;
-    --sidebar-border: 40 15% 85%;
-    --sidebar-ring: 93 13% 49%;
-  }
-
-  .dark {
-    --background: 30 10% 10%;
-    --foreground: 30 20% 96%;
-
-    --card: 30 10% 15%;
-    --card-foreground: 30 20% 96%;
-
-    --popover: 30 10% 10%;
-    --popover-foreground: 30 20% 96%;
-
-    --primary: 93 20% 55%;
-    --primary-foreground: 30 10% 10%;
-
-    --secondary: 300 15% 25%;
-    --secondary-foreground: 30 20% 96%;
-
-    --muted: 30 10% 20%;
-    --muted-foreground: 30 15% 65%;
-
-    --accent: 300 15% 25%;
-    --accent-foreground: 30 20% 96%;
-
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 30 20% 96%;
-
-    --border: 30 10% 25%;
-    --input: 30 10% 25%;
-    --ring: 93 20% 55%;
-
-    --sidebar-background: 30 10% 10%;
-    --sidebar-foreground: 30 20% 96%;
-    --sidebar-primary: 93 20% 55%;
-    --sidebar-primary-foreground: 30 10% 10%;
-    --sidebar-accent: 300 15% 25%;
-    --sidebar-accent-foreground: 30 20% 96%;
-    --sidebar-border: 30 10% 25%;
-    --sidebar-ring: 93 20% 55%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
-  }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: hsl(var(--cream));
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--olive) / 0.3);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--olive) / 0.5);
-}
+ @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+ 
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+ 
+ @layer base {
+   :root {
+     /* Dr. Maya Reynolds - California Coastal Color Palette */
+     --background: 36 30% 93%; /* #F4EFE8 sand */
+     --foreground: 192 21% 23%; /* #2F3E46 text-dark */
+ 
+     --card: 40 33% 97%; /* #FAF8F5 cream */
+     --card-foreground: 192 21% 23%;
+ 
+     --popover: 40 33% 97%;
+     --popover-foreground: 192 21% 23%;
+ 
+     --primary: 93 20% 63%; /* #A3B18A sage */
+     --primary-foreground: 192 21% 23%;
+ 
+     --secondary: 20 50% 56%; /* #C77D58 terracotta */
+     --secondary-foreground: 40 33% 97%;
+ 
+     --muted: 36 25% 87%; /* #E8DFD4 sand-dark */
+     --muted-foreground: 163 21% 38%; /* #52796F text-medium */
+ 
+     --accent: 195 18% 57%; /* #7B9EA8 ocean */
+     --accent-foreground: 192 21% 23%;
+ 
+     --destructive: 0 84% 60%;
+     --destructive-foreground: 40 33% 97%;
+ 
+     --border: 36 20% 82%;
+     --input: 36 20% 82%;
+     --ring: 93 20% 63%;
+ 
+     --radius: 0.5rem;
+ 
+     /* Custom semantic tokens - California Coastal */
+     --sand: 36 30% 93%; /* #F4EFE8 */
+     --sand-dark: 36 25% 87%; /* #E8DFD4 */
+     --cream: 40 33% 97%; /* #FAF8F5 */
+     --sage: 93 20% 63%; /* #A3B18A */
+     --terracotta: 20 50% 56%; /* #C77D58 */
+     --ocean: 195 18% 57%; /* #7B9EA8 */
+     --text-dark: 192 21% 23%; /* #2F3E46 */
+     --text-medium: 163 21% 38%; /* #52796F */
+     --text-light: 93 20% 58%; /* #84A98C */
+ 
+     --sidebar-background: 36 30% 93%;
+     --sidebar-foreground: 192 21% 23%;
+     --sidebar-primary: 93 20% 63%;
+     --sidebar-primary-foreground: 192 21% 23%;
+     --sidebar-accent: 195 18% 57%;
+     --sidebar-accent-foreground: 192 21% 23%;
+     --sidebar-border: 36 20% 82%;
+     --sidebar-ring: 93 20% 63%;
+   }
+ 
+   .dark {
+     --background: 192 21% 12%;
+     --foreground: 36 30% 93%;
+ 
+     --card: 192 21% 15%;
+     --card-foreground: 36 30% 93%;
+ 
+     --popover: 192 21% 12%;
+     --popover-foreground: 36 30% 93%;
+ 
+     --primary: 93 20% 63%;
+     --primary-foreground: 192 21% 12%;
+ 
+     --secondary: 20 50% 56%;
+     --secondary-foreground: 36 30% 93%;
+ 
+     --muted: 192 15% 20%;
+     --muted-foreground: 163 15% 55%;
+ 
+     --accent: 195 18% 45%;
+     --accent-foreground: 36 30% 93%;
+ 
+     --destructive: 0 62% 30%;
+     --destructive-foreground: 36 30% 93%;
+ 
+     --border: 192 15% 25%;
+     --input: 192 15% 25%;
+     --ring: 93 20% 63%;
+ 
+     --sidebar-background: 192 21% 12%;
+     --sidebar-foreground: 36 30% 93%;
+     --sidebar-primary: 93 20% 63%;
+     --sidebar-primary-foreground: 192 21% 12%;
+     --sidebar-accent: 195 18% 45%;
+     --sidebar-accent-foreground: 36 30% 93%;
+     --sidebar-border: 192 15% 25%;
+     --sidebar-ring: 93 20% 63%;
+   }
+ }
+ 
+ @layer base {
+   * {
+     @apply border-border;
+   }
+ 
+   body {
+     @apply bg-background text-foreground font-sans antialiased;
+   }
+ 
+   h1, h2, h3, h4, h5, h6 {
+     @apply font-serif;
+   }
+ }
+ 
+ /* Smooth scrolling */
+ html {
+   scroll-behavior: smooth;
+ }
+ 
+ /* Custom scrollbar */
+ ::-webkit-scrollbar {
+   width: 8px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background: hsl(var(--sand));
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background: hsl(var(--sage) / 0.4);
+   border-radius: 4px;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+   background: hsl(var(--sage) / 0.6);
+ }
