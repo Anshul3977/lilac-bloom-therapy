@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 const Introduction = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-150px" });
 
     return (
         <section className="py-24 bg-cream relative overflow-hidden" ref={ref}>
@@ -16,7 +16,7 @@ const Introduction = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        transition={{ duration: 1.0, ease: "easeOut" }}
                         className="relative"
                     >
                         {/* Decorative circle behind image */}
@@ -36,12 +36,12 @@ const Introduction = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+                        transition={{ duration: 1.0, ease: "easeOut", delay: 0.25 }}
                     >
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            transition={{ duration: 0.8, delay: 0.35 }}
                             className="text-sage font-medium text-xs uppercase tracking-widest mb-4 block"
                         >
                             A Grounded Approach
@@ -49,7 +49,7 @@ const Introduction = () => {
                         <motion.h2
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.25 }}
+                            transition={{ duration: 1.0, delay: 0.45 }}
                             className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-text-dark mb-8 leading-[1.1]"
                         >
                             You&apos;re not <span className="italic underline decoration-sage/30 underline-offset-4">alone in this.</span>
@@ -57,7 +57,7 @@ const Introduction = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.35 }}
+                            transition={{ duration: 1.0, delay: 0.6 }}
                             className="space-y-5 text-text-medium leading-relaxed font-light text-base md:text-lg"
                         >
                             <p>

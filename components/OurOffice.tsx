@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const OurOffice = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-150px" });
 
     return (
         <section className="py-24 bg-sage/10" ref={ref}>
@@ -18,12 +18,12 @@ const OurOffice = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        transition={{ duration: 1.0, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.5, delay: 0.1 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
                             className="text-sage font-medium text-xs uppercase tracking-widest mb-4 block"
                         >
                             Visit Us
@@ -31,7 +31,7 @@ const OurOffice = () => {
                         <motion.h2
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.15 }}
+                            transition={{ duration: 1.0, delay: 0.25 }}
                             className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-text-dark mb-8 leading-[1.1]"
                         >
                             A Calm Space for Healing
@@ -39,7 +39,7 @@ const OurOffice = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.25 }}
+                            transition={{ duration: 1.0, delay: 0.45 }}
                             className="space-y-5 text-text-medium leading-relaxed font-light text-base md:text-lg mb-10"
                         >
                             <p>
@@ -58,7 +58,7 @@ const OurOffice = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.35 }}
+                            transition={{ duration: 1.0, delay: 0.6 }}
                             className="space-y-4"
                         >
                             <div className="flex items-center gap-4">
@@ -92,7 +92,7 @@ const OurOffice = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.15 }}
+                        transition={{ duration: 1.0, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.25 }}
                         className="relative"
                     >
                         <div className="grid grid-cols-5 gap-4">

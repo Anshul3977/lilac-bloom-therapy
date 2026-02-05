@@ -16,7 +16,7 @@ const supportItems = [
 
 const Support = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-150px" });
 
     return (
         <section className="py-24 bg-sand" ref={ref}>
@@ -26,12 +26,12 @@ const Support = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        transition={{ duration: 1.0, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.5, delay: 0.1 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
                             className="text-sage font-medium text-xs uppercase tracking-widest mb-4 block"
                         >
                             My Approach
@@ -39,7 +39,7 @@ const Support = () => {
                         <motion.h2
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.15 }}
+                            transition={{ duration: 1.0, delay: 0.25 }}
                             className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-text-dark mb-6 leading-[1.1]"
                         >
                             Collaborative, Evidence-Based Therapy
@@ -47,7 +47,7 @@ const Support = () => {
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.2 }}
+                            transition={{ duration: 1.0, delay: 0.35 }}
                             className="text-text-medium font-light text-base md:text-lg mb-8"
                         >
                             I believe therapy works best when you feel respected, understood, and actively involved in the process.
@@ -55,7 +55,7 @@ const Support = () => {
                         <motion.ul
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.25 }}
+                            transition={{ duration: 1.0, delay: 0.45 }}
                             className="space-y-4"
                         >
                             {supportItems.map((item, index) => (
@@ -63,7 +63,7 @@ const Support = () => {
                                     key={index}
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                    transition={{ duration: 0.5, delay: 0.3 + index * 0.08 }}
+                                    transition={{ duration: 0.8, delay: 0.5 + index * 0.15 }}
                                     className="flex items-start gap-4"
                                 >
                                     <div className="w-8 h-8 rounded-full bg-sage/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -81,7 +81,7 @@ const Support = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.15 }}
+                        transition={{ duration: 1.0, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.25 }}
                         className="relative"
                     >
                         <div className="aspect-[4/5] overflow-hidden rounded-lg">

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-50px" });
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     const scrollToContact = () => {
         const element = document.getElementById("contact");
@@ -29,7 +29,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        transition={{ duration: 1.0, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="order-2 lg:order-1"
                     >
                         <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-[1.05] text-text-dark mb-8 tracking-tight">
@@ -39,7 +39,7 @@ const Hero = () => {
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+                            transition={{ duration: 1.0, delay: 0.25, ease: "easeOut" }}
                             className="text-base md:text-lg text-text-medium mb-10 max-w-lg leading-relaxed font-light"
                         >
                             Compassionate support for adults navigating stress, perfectionism, and the lingering effects of past experiences.
@@ -47,7 +47,7 @@ const Hero = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                            transition={{ duration: 1.0, delay: 0.5, ease: "easeOut" }}
                             className="flex flex-col sm:flex-row gap-4"
                         >
                             <Button
@@ -75,7 +75,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.1 }}
+                        transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.2 }}
                         className="order-1 lg:order-2 flex justify-center"
                     >
                         <div className="relative w-full max-w-md">

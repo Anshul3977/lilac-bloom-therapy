@@ -40,7 +40,7 @@ const faqs = [
 
 const FAQ = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-150px" });
 
     return (
         <section id="faq" className="py-24 bg-sand" ref={ref}>
@@ -49,7 +49,7 @@ const FAQ = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    transition={{ duration: 1.0, ease: [0.25, 0.46, 0.45, 0.94] }}
                     className="text-center mb-16"
                 >
                     <span className="text-sage font-medium text-xs uppercase tracking-widest mb-4 block">
@@ -64,7 +64,7 @@ const FAQ = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    transition={{ duration: 1.0, delay: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
                     className="max-w-3xl mx-auto"
                 >
                     <Accordion type="single" collapsible className="space-y-4">
@@ -73,7 +73,7 @@ const FAQ = () => {
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.5, delay: 0.2 + index * 0.08 }}
+                                transition={{ duration: 0.8, delay: 0.35 + index * 0.15 }}
                             >
                                 <AccordionItem
                                     value={`item-${index}`}

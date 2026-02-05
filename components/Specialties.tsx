@@ -24,7 +24,7 @@ const specialties = [
 
 const Specialties = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-150px" });
 
     return (
         <section id="specialties" className="py-24 bg-sand-dark" ref={ref}>
@@ -33,7 +33,7 @@ const Specialties = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    transition={{ duration: 1.0, ease: [0.25, 0.46, 0.45, 0.94] }}
                     className="text-center mb-16"
                 >
                     <span className="text-sage font-medium text-xs uppercase tracking-widest mb-4 block">
@@ -52,8 +52,8 @@ const Specialties = () => {
                             initial={{ opacity: 0, y: 50 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{
-                                duration: 0.6,
-                                delay: 0.15 + index * 0.1,
+                                duration: 1.0,
+                                delay: 0.25 + index * 0.2,
                                 ease: [0.25, 0.46, 0.45, 0.94],
                             }}
                             className="group text-center"
